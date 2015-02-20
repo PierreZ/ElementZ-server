@@ -27,12 +27,10 @@ func (a ByScore) Len() int           { return len(a) }
 func (a ByScore) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
 func (a ByScore) Less(i, j int) bool { return a[i].Score > a[j].Score }
 
-// top_5 is a slice
-
 func main() {
 
 	players = Players{
-		Player{Name: "God", Score: 1}}
+		Player{Name: "Chuck Norris", Score: 9999}}
 	Init()
 }
 
@@ -46,7 +44,6 @@ func getData() string {
 // Handling the sorting issues
 func addData(player Player) {
 
-	// temp is a slice
 	// http://blog.denevell.org/golang-slices.html
 	var slice []Player
 	// players[0:len(players)] convert array to slice
